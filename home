@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本屋敷健太 - プロフィール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .content h2 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            margin: 5px 0;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="path_to_your_image.jpg" alt="Profile Image">
+            <h1>本屋敷 健太</h1>
+        </div>
+
+        <div class="content">
+            <h2>趣味</h2>
+            <p>ドラム・音楽</p>
+
+            <h2>興味</h2>
+            <p>人類進化・数理生物</p>
+
+            <h2>所属学会</h2>
+            <p>数理生物学会・人間行動進化学会</p>
+
+            <h2>事跡</h2>
+            <ul>
+                <li>2001年 広島で生まれる</li>
+                <li>2020年3月 広島修道高校を卒業</li>
+                <li>2020年4月 九州大学理学部生物学科入学</li>
+                <li>2022年2月 九州大学チャレンジ&amp;クリエイション 総長賞 最優秀賞</li>
+                <li>2023年2月 九州大学チャレンジ&amp;クリエイション 総長賞 優秀賞</li>
+                <li>2023年4月~現在 数理生物学研究室所属(B4)</li>
+                <li>2023年9月 日本数理生物学会 口頭発表「うつ病関連遺伝子の進化モデル」</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
