@@ -1,1 +1,0 @@
-# motoyankk.github.io
