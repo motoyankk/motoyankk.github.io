@@ -3,93 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>本屋敷健太 - プロフィール</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .content h2 {
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .content p {
-            margin: 5px 0;
-        }
-
-        .content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .content ul li {
-            padding: 5px 0;
-        }
-    </style>
+    <title>Kenta Motoyashiki | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="path_to_your_image.jpg" alt="Profile Image">
-            <h1>本屋敷 健太</h1>
-        </div>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
-        <div class="content">
-            <h2>趣味</h2>
-            <p>ドラム・音楽</p>
-
-            <h2>興味</h2>
-            <p>人類進化・数理生物</p>
-
-            <h2>所属学会</h2>
-            <p>数理生物学会・人間行動進化学会</p>
-
-            <h2>事跡</h2>
-            <ul>
-                <li>2001年 広島で生まれる</li>
-                <li>2020年3月 広島修道高校を卒業</li>
-                <li>2020年4月 九州大学理学部生物学科入学</li>
-                <li>2022年2月 九州大学チャレンジ&amp;クリエイション 総長賞 最優秀賞</li>
-                <li>2023年2月 九州大学チャレンジ&amp;クリエイション 総長賞 優秀賞</li>
-                <li>2023年4月~現在 数理生物学研究室所属(B4)</li>
-                <li>2023年9月 日本数理生物学会 口頭発表「うつ病関連遺伝子の進化モデル」</li>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <h1 class="logo">Kenta Motoyashiki</h1>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#research" class="nav-link" data-target="research">Research</a></li>
+                <li><a href="#extracurricular" class="nav-link" data-target="extracurricular">Extracurricular</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-content fade-in-up">
+                    <h2 class="title">本屋敷 健太</h2>
+                    <p class="subtitle">Motoyashiki Kenta</p>
+                    <div class="tags">
+                        <span class="tag">Evolutionary Biology</span>
+                        <span class="tag">Mathematical Biology</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2-col">
+                <div class="glass-card fade-in-up" style="animation-delay: 0.1s;">
+                    <h3>About Me</h3>
+                    <ul class="info-list">
+                        <li><strong>所属:</strong> 九州大学 理学部 生物学科 数理生物学研究室</li>
+                        <li><strong>興味:</strong> 人類進化・数理生物</li>
+                        <li><strong>趣味:</strong> ドラム・音楽</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card fade-in-up" style="animation-delay: 0.2s;">
+                    <h3>Awards</h3>
+                    <ul class="timeline">
+                        <li>
+                            <div class="date">2023.2</div>
+                            <div class="event">九州大学チャレンジ&クリエイション 総長賞 優秀賞</div>
+                        </li>
+                        <li>
+                            <div class="date">2022.2</div>
+                            <div class="event">九州大学チャレンジ&クリエイション 総長賞 最優秀賞</div>
+                        </li>
+                        <li>
+                            <div class="date">2021</div>
+                            <div class="event">iGEM Competition 2021 Silver medal</div>
+                        </li>
+                        <li>
+                            <div class="date">2019</div>
+                            <div class="event">日本生物学オリンピック 銅賞</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card mt-2 fade-in-up" style="animation-delay: 0.3s;">
+                <h3>Biography</h3>
+                <ul class="timeline">
+                    <li>
+                        <div class="date">2023.4</div>
+                        <div class="event">数理生物学研究室 配属 (B4)</div>
+                    </li>
+                    <li>
+                        <div class="date">2020.4</div>
+                        <div class="event">九州大学 理学部 生物学科 入学</div>
+                    </li>
+                    <li>
+                        <div class="date">2020.3</div>
+                        <div class="event">広島修道高校 卒業</div>
+                    </li>
+                    <li>
+                        <div class="date">2001</div>
+                        <div class="event">広島県にて出生</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="page-section">
+            <h2 class="section-title fade-in-up">Research & Publications</h2>
+            
+            <div class="glass-card mb-2 fade-in-up">
+                <h3>Affiliations</h3>
+                <div class="tags">
+                    <span class="tag outline">数理生物学会</span>
+                    <span class="tag outline">人間行動進化学会</span>
+                </div>
+            </div>
+
+            <div class="glass-card fade-in-up" style="animation-delay: 0.1s;">
+                <h3>Presentations</h3>
+                
+                <h4 class="year-header">2025</h4>
+                <ul class="presentation-list">
+                    <li>
+                        <span class="presentation-type">国際発表</span>
+                        <div class="presentation-details">
+                            <strong>国際数理生物学会</strong>
+                            <span>"Anxiety-causing alleles are favored in moderately stressful environments"</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="presentation-type">国内フォーラム</span>
+                        <div class="presentation-details">
+                            <strong>理論進化生態フォーラム</strong>
+                            <span>「季節性情動障害に関連するセロトニントランスポータ結合パタンの季節変動」</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h4 class="year-header">2024</h4>
+                <ul class="presentation-list">
+                    <li>
+                        <span class="presentation-type">ポスター</span>
+                        <div class="presentation-details">
+                            <strong>日本人間行動進化学会</strong>
+                            <span>「うつ関連遺伝子アレル頻度の地理的勾配を生み出した地域間環境格差に関する数理モデル：東アジアは過酷だったか？ユートピアだったか？」</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="presentation-type">口頭</span>
+                        <div class="presentation-details">
+                            <strong>日本数理生物学会</strong>
+                            <span>「うつ関連遺伝子の進化モデル」</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="presentation-type">口頭</span>
+                        <div class="presentation-details">
+                            <strong>理論生物若手の会</strong>
+                            <span>「うつ病関連遺伝子の進化モデル：5-HTT遺伝子多型の維持メカニズムの解明」</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="presentation-type">口頭</span>
+                        <div class="presentation-details">
+                            <strong>ゲーム理論ワークショップ</strong>
+                            <span>「うつ関連遺伝子の進化モデル」</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h4 class="year-header">2023</h4>
+                <ul class="presentation-list">
+                    <li>
+                        <span class="presentation-type">口頭</span>
+                        <div class="presentation-details">
+                            <strong>日本数理生物学会</strong>
+                            <span>「うつ病関連遺伝子の進化モデル」 (2023.9)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="presentation-type">ポスター</span>
+                        <div class="presentation-details">
+                            <strong>理論生物学若手の会</strong>
+                            <span>"Model for the evolution of depression-related genes"</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Extracurricular Section -->
+        <section id="extracurricular" class="page-section">
+            <h2 class="section-title fade-in-up">Extracurricular Activities</h2>
+            <div class="grid-2-col">
+                <div class="glass-card fade-in-up">
+                    <h3>Japanese Culture & Arts 🇯🇵</h3>
+                    <p class="description-text">
+                        日本の伝統文化に対する関心と活動の記録をここにまとめます。和の心や独自の美意識を探求し、現代においてどのように表現・継承できるかを模索しています。
+                    </p>
+                    <div class="placeholder-box">
+                        <p>Japanese Culture Contents Here</p>
+                        <span>※和楽器、茶道、書道などの写真や活動内容を追加予定です。</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card fade-in-up" style="animation-delay: 0.1s;">
+                    <h3>Music & Drums 🥁</h3>
+                    <p class="description-text">
+                        ドラム演奏や音楽活動に取り組んできました。リズムの構築やアンサンブルの楽しさを通して、表現の幅を広げています。
+                    </p>
+                    <div class="placeholder-box">
+                        <p>Music Contents Here</p>
+                        <span>※演奏風景やバンドに関する写真・エピソードを追加予定です。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2025 Kenta Motoyashiki. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
