@@ -1,61 +1,56 @@
 /**
- * Kenta Motoyashiki Portfolio — Script
+ * MoK Studio — Kenta Motoyashiki Portfolio
+ * Smooth Navigation & Micro-Interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const navTabs = document.querySelectorAll('.nav-tab');
-    const profileTabs = document.querySelectorAll('.tab-btn');
-    const tabSections = document.querySelectorAll('.tab-section');
+    const navLinks = document.querySelectorAll('.nav-link, .footer-nav a');
+    const sections = document.querySelectorAll('.content-section');
 
-    function switchTab(targetId) {
-        let validId = targetId;
-        if (!['about', 'research', 'activities'].includes(validId)) {
-            validId = 'about';
-        }
-
-        // Update header nav tabs
-        navTabs.forEach(tab => {
-            tab.classList.toggle('active', tab.dataset.tab === validId);
-        });
-
-        // Update profile card tabs
-        profileTabs.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.tab === validId);
-        });
-
-        // Update sections
-        tabSections.forEach(section => {
-            if (section.id === validId) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
-            }
-        });
-    }
-
-    function handleHash() {
-        const hash = window.location.hash.replace('#', '');
-        switchTab(hash || 'about');
-    }
-
-    // Attach click events
-    [...navTabs, ...profileTabs].forEach(el => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            const tabId = el.dataset.tab;
-            if (window.location.hash !== `#${tabId}`) {
-                window.location.hash = tabId;
-            } else {
-                switchTab(tabId);
-            }
-            // Smooth scroll up to tabs if scrolled down
-            const profileCard = document.querySelector('.profile-card');
-            if (profileCard && window.scrollY > profileCard.offsetTop + 100) {
-                profileCard.scrollIntoView({ behavior: 'smooth' });
+    // Smooth scroll with offset for sticky header
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerHeight = document.querySelector('.site-header')?.offsetHeight || 70;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 10;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    history.pushState(null, null, href);
+                }
             }
         });
     });
 
-    window.addEventListener('hashchange', handleHash);
-    handleHash();
+    // Active state observer on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                document.querySelectorAll('.site-nav .nav-link').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === `#${id}`) {
+                        link.style.opacity = '1';
+                        link.style.color = '#111111';
+                    } else {
+                        link.style.opacity = '';
+                        link.style.color = '';
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(sec => observer.observe(sec));
 });
