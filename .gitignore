@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# HEIC files (not web-compatible)
+*.heic
+*.HEIC
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
