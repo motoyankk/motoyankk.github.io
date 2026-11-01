@@ -1,91 +1,126 @@
+/**
+ * Kenta Motoyashiki Portfolio — Interactions
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Background Navigation Bar Effect
-    const nav = document.querySelector('.glass-nav');
+    const header = document.getElementById('site-header');
+    const navItems = document.querySelectorAll('.nav-item');
+    const brandLink = document.querySelector('.site-title');
+    const tabs = document.querySelectorAll('.tab-content');
+
+    // Scroll effect for header
     window.addEventListener('scroll', () => {
         if (window.scrollY > 20) {
-            nav.style.background = 'rgba(22, 27, 34, 0.85)';
-            nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            header.classList.add('scrolled');
         } else {
-            nav.style.background = 'rgba(22, 27, 34, 0.6)';
-            nav.style.boxShadow = 'none';
+            header.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
 
-    // Page Section Switching (SPA behavior)
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.page-section');
+    // Switch section tab
+    function switchTab(targetId) {
+        let validTarget = targetId;
+        if (!['home', 'research', 'activities'].includes(validTarget)) {
+            validTarget = 'home';
+        }
 
-    // Function to switch active sections
-    function switchSection(targetId) {
-        // Update navigation links
-        navLinks.forEach(link => {
-            if (link.dataset.target === targetId) {
-                link.classList.add('active');
+        // Update nav active states
+        navItems.forEach(item => {
+            const matches = item.dataset.target === validTarget;
+            item.classList.toggle('active', matches);
+        });
+
+        // Switch tab contents with smooth fade
+        tabs.forEach(tab => {
+            if (tab.id === validTarget) {
+                tab.classList.add('active');
+                requestAnimationFrame(() => {
+                    tab.classList.add('fade-in');
+                });
             } else {
-                link.classList.remove('active');
+                tab.classList.remove('fade-in');
+                tab.classList.remove('active');
             }
         });
 
-        // Update sections
-        sections.forEach(section => {
-            if (section.id === targetId) {
-                section.classList.add('active');
-                
-                // Small delay to allow display:block to apply before animating opacity
-                setTimeout(() => {
-                    section.classList.add('fade-in');
-                    
-                    // Re-trigger animations for elements inside the section
-                    const animatedElements = section.querySelectorAll('.fade-in-up');
-                    animatedElements.forEach(el => {
-                        el.style.animation = 'none';
-                        el.offsetHeight; // Trigger reflow
-                        el.style.animation = null;
-                    });
-                }, 10);
-                
-            } else {
-                section.classList.remove('fade-in');
-                setTimeout(() => {
-                    if(!section.classList.contains('fade-in')) {
-                        section.classList.remove('active');
-                    }
-                }, 400); // Matches CSS transition duration
-            }
-        });
-        
-        // Scroll to top when switching tabs
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Handle initial state and hash changes
-    function handleRoute() {
-        const hash = window.location.hash.substring(1);
-        if (hash && document.getElementById(hash)) {
-            switchSection(hash);
-        } else {
-            // Default to home
-            switchSection('home');
-            // Trigger initial animation for home
-            document.getElementById('home').classList.add('fade-in');
-        }
+    // Handle hash navigation
+    function handleHashChange() {
+        const hash = window.location.hash.replace('#', '');
+        switchTab(hash || 'home');
     }
 
-    // Add click event listeners to links
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+    // Event listeners for nav items
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = link.dataset.target;
-            window.location.hash = targetId;
+            const target = item.dataset.target;
+            if (window.location.hash !== `#${target}`) {
+                window.location.hash = target;
+            } else {
+                switchTab(target);
+            }
         });
     });
 
-    // Listen for hash changes (back/forward browser buttons)
-    window.addEventListener('hashchange', handleRoute);
+    if (brandLink) {
+        brandLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.hash = 'home';
+        });
+    }
 
-    // Run initial route setup
-    handleRoute();
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange();
+
+    // ==========================================================================
+    // Lightbox for Photos
+    // ==========================================================================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+
+    galleryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const fullSrc = card.getAttribute('data-full');
+            if (fullSrc) {
+                lightboxImg.src = fullSrc;
+                lightbox.style.display = 'flex';
+                requestAnimationFrame(() => {
+                    lightbox.classList.add('open');
+                });
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+            document.body.style.overflow = '';
+        }, 200);
+    }
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+            closeLightbox();
+        }
+    });
 });
