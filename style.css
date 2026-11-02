@@ -717,6 +717,107 @@ ul, ol {
 }
 
 /* ==========================================================================
+   TALKS & LECTURES SECTION
+   ========================================================================== */
+.talks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.talk-year-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.talk-year-badge {
+  font-family: var(--font-serif-en);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.4rem;
+  display: inline-block;
+}
+
+.talk-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.talk-item-card {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 1.75rem;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.talk-item-card:hover {
+  border-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.talk-highlight {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.talk-category {
+  font-family: var(--font-serif-ja);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.talk-title {
+  font-family: var(--font-serif-ja);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.talk-host {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.talk-desc {
+  font-size: 0.9rem;
+  line-height: 1.95;
+  color: var(--text-secondary);
+}
+
+.talk-media-thumb {
+  margin-top: 1.25rem;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background-color: #ffffff;
+  max-width: 480px;
+}
+
+.talk-thumb-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
    WORKS & ACTIVITIES
    ========================================================================== */
 .band-links-row {
@@ -911,12 +1012,12 @@ ul, ol {
   }
 
   .site-nav {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .nav-link {
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
   }
 
   .main-container {
