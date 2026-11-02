@@ -1,0 +1,36 @@
+name: Sync note.com Articles
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at 00:00 UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Sync Script
+        run: python3 scripts/sync_note.py
+
+      - name: Commit & Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/note-articles.json)" ]; then
+            git add data/note-articles.json
+            git commit -m "Auto-sync note.com articles [skip ci]"
+            git push
+          else
+            echo "No changes detected in note articles."
+          fi
