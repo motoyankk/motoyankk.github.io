@@ -744,8 +744,8 @@ ul, ol {
 
 .talk-cards-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.25rem;
 }
 
 .talk-item-card {
@@ -762,6 +762,7 @@ ul, ol {
 }
 
 .talk-highlight {
+  grid-column: 1 / -1;
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -804,11 +805,15 @@ ul, ol {
 
 .talk-media-thumb {
   margin-top: 1.25rem;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border-light);
-  background-color: #ffffff;
-  max-width: 480px;
+  background-color: #fcfcfc;
+  padding: 1.25rem 1.75rem;
+  max-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .talk-thumb-img {
@@ -1043,6 +1048,10 @@ ul, ol {
   .meta-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .talk-cards-grid {
+    grid-template-columns: 1fr;
   }
 
   .featured-paper-card {
