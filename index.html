@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoK Studio | 本屋敷 健太 (Kenta Motoyashiki)</title>
-    <meta name="description" content="本屋敷 健太（もとやん）のポートフォリオ。進化生物学・数理生物学（学士:理学、修士:芸術工学、副専攻:人文学）、論文・講演活動、音楽、教育などの記録。">
+    <meta name="description" content="本屋敷 健太（もとやん）の公式ポートフォリオ。進化生物学・数理生物学（学士:理学、修士:芸術工学、副専攻:人文学）、論文・講演活動、音楽、映像作品、日本文化の探求。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,649 +17,156 @@
     <!-- Site Header -->
     <header class="site-header">
         <div class="header-inner">
-            <a href="#about" class="site-logo">MoK Studio</a>
+            <a href="index.html" class="site-logo">MoK Studio <span>/ K. Motoyashiki</span></a>
             <nav class="site-nav">
-                <a href="#about" class="nav-link">ABOUT</a>
-                <a href="#research" class="nav-link">RESEARCH</a>
-                <a href="#talks" class="nav-link">TALKS</a>
-                <a href="#works" class="nav-link">WORKS</a>
-                <a href="#gallery" class="nav-link">GALLERY</a>
-                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="research.html" class="nav-link">RESEARCH</a>
+                <a href="talks.html" class="nav-link">TALKS</a>
+                <a href="works.html" class="nav-link">WORKS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
         </div>
     </header>
 
-    <main class="main-container">
+    <!-- Cinematic Hero Section with Ambient Video Loop -->
+    <section class="hero-wrapper">
+        <video autoplay loop muted playsinline poster="videos/poster-hero.jpg" class="hero-video-bg">
+            <source src="videos/hero_loop.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
 
-        <!-- ==================== ABOUT SECTION ==================== -->
-        <section id="about" class="content-section">
+        <div class="hero-content">
+            <span class="hero-kicker">Portfolio &amp; Archives</span>
+            <h1 class="hero-title">本屋敷 健太</h1>
+            <p class="hero-title-en">Kenta Motoyashiki</p>
+            <p class="hero-lead">
+                九州大学大学院 芸術工学府 修士（芸術工学） / 理学部 生物学科 学士（理学・副専攻 人文学）。<br>
+                進化生物学・数理モデルによる情動の解析、知覚とメディア、ドラム演奏、そして日本文化の探求。
+            </p>
+            <div class="hero-nav-pills">
+                <a href="about.html" class="hero-pill">ABOUT</a>
+                <a href="research.html" class="hero-pill">RESEARCH</a>
+                <a href="talks.html" class="hero-pill">TALKS</a>
+                <a href="works.html" class="hero-pill">WORKS</a>
+                <a href="contact.html" class="hero-pill">CONTACT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="main-container wide">
+
+        <!-- Navigation Overview Cards -->
+        <section class="article-block">
             <div class="section-title-wrap">
-                <h1 class="page-title">ABOUT</h1>
-                <span class="page-title-sub">本屋敷 健太 / Kenta Motoyashiki</span>
+                <h2 class="block-heading">SECTIONS <span>目次</span></h2>
             </div>
 
-            <!-- Portrait & Introduction -->
-            <div class="intro-block">
-                <div class="portrait-box">
-                    <img src="images/avatar.jpg" alt="本屋敷 健太" class="portrait-img" onerror="this.onerror=null; this.src='images/icon.jpg';">
-                </div>
-                <div class="intro-text">
-                    <h2 class="creator-name">本屋敷 健太 <span>(もとやん)</span></h2>
-                    <p class="creator-role">東京在住・会社員 / 進化生物学・芸術工学</p>
-                    <p class="mission-statement">
-                        九州大学理学部生物学科にて数理生物学を専攻（学士:理学、副専攻:人文学）し、九州大学大学院 芸術工学府 未来共生デザインコースにて修士（芸術工学）を修了。2026年4月より東京にて会社員として勤務しています。<br>
-                        ヒトの心理や感情の進化的維持メカニズムに関する数理研究のほか、科学コミュニケーションや一般・学校向けの講演、ドラム演奏、日本文化の探求などに取り組んでいます。
+            <div class="overview-grid">
+                <a href="about.html" class="overview-card">
+                    <span class="overview-kicker">01 / PROFILE &amp; BIOGRAPHY</span>
+                    <h3 class="overview-title">ABOUT 略歴・学位</h3>
+                    <p class="overview-desc">
+                        理学部（数理生物学専攻）から芸術工学府（未来共生デザイン）への軌跡。学位、保有資格（宗教文化士・教員免許・G検定）、指導歴、略歴を掲載。
                     </p>
-                    <div class="social-pills">
-                        <a href="https://x.com/motoyankk" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <span>X: @motoyankk</span>
-                        </a>
-                        <a href="https://note.com/shiganaibio" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <span>Note</span>
-                        </a>
-                        <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/view/1267/" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <span>Jxiv Preprint</span>
-                        </a>
-                    </div>
-                </div>
+                    <span class="overview-arrow">VIEW ABOUT →</span>
+                </a>
+
+                <a href="research.html" class="overview-card">
+                    <span class="overview-kicker">02 / ACADEMIC RESEARCH</span>
+                    <h3 class="overview-title">RESEARCH 数理生物学・論文</h3>
+                    <p class="overview-desc">
+                        不安や抑うつといったヒトの心理特性の進化的維持メカニズムを数理モデルで解明。Jxivプレプリント論文、国内外での学会発表記録。
+                    </p>
+                    <span class="overview-arrow">VIEW RESEARCH →</span>
+                </a>
+
+                <a href="talks.html" class="overview-card">
+                    <span class="overview-kicker">03 / LECTURES &amp; SESSIONS</span>
+                    <h3 class="overview-title">TALKS 講演・講義登壇</h3>
+                    <p class="overview-desc">
+                        学術学会以外の一般向け・学校向け登壇実績。高校修学旅行企画、九大大学院メディアサイエンス講義、サイエンスキャンプ、市民講座など。
+                    </p>
+                    <span class="overview-arrow">VIEW TALKS →</span>
+                </a>
+
+                <a href="works.html" class="overview-card">
+                    <span class="overview-kicker">04 / CREATIVE &amp; CULTURE</span>
+                    <h3 class="overview-title">WORKS 音楽・映像・文化</h3>
+                    <p class="overview-desc">
+                        ドラム演奏（バンド活動）、映像作品の記録、宗教文化士としての神仏習合・神社仏閣探求、子役時代の映画出演記録。
+                    </p>
+                    <span class="overview-arrow">VIEW WORKS →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Video Works Feature Section -->
+        <section class="article-block">
+            <div class="section-title-wrap">
+                <h2 class="block-heading">FEATURED VIDEO WORKS <span>映像作品</span></h2>
+                <p class="section-lead-narrative">
+                    自然の知覚、聖地の景観、民俗的な音像を記録・構成した映像アーカイブです。ブラウザ上で直接再生いただけます。
+                </p>
             </div>
 
-            <!-- Scattered Photo 1 -->
-            <div class="editorial-photo-row">
-                <figure class="editorial-photo-box">
-                    <img src="images/gallery/acad_01.jpg" alt="九州大学 図書館書架にて" class="editorial-img" loading="lazy">
-                </figure>
-            </div>
-
-            <!-- Degrees & Background -->
-            <div class="article-block">
-                <h3 class="block-heading">Degrees <span>学位</span></h3>
-                <div class="meta-grid">
-                    <div class="meta-card">
-                        <span class="meta-kicker">DEGREE 01</span>
-                        <h4 class="meta-title">修士（芸術工学）</h4>
-                        <p class="meta-desc">九州大学大学院 芸術工学府 未来共生デザインコース（2026.03 修了）</p>
+            <div class="video-showcase-grid">
+                <!-- Video 1: 世界の知覚 -->
+                <article class="video-card">
+                    <div class="video-player-wrap">
+                        <video controls preload="metadata" poster="videos/poster-chikaku.jpg" playsinline>
+                            <source src="videos/chikaku.mp4" type="video/mp4">
+                            お使いのブラウザは動画再生に対応していません。
+                        </video>
                     </div>
-                    <div class="meta-card">
-                        <span class="meta-kicker">DEGREE 02</span>
-                        <h4 class="meta-title">学士（理学）</h4>
-                        <p class="meta-desc">九州大学 理学部 生物学科 数理生物学研究室（2024.03 卒業）</p>
-                    </div>
-                    <div class="meta-card">
-                        <span class="meta-kicker">MINOR</span>
-                        <h4 class="meta-title">副専攻：人文学</h4>
-                        <p class="meta-desc">九州大学 人文学副専攻プログラム 修得</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications & Teaching -->
-            <div class="article-block">
-                <h3 class="block-heading">Certifications &amp; Teaching <span>資格・教育指導歴</span></h3>
-                <div class="two-column-layout">
-                    <div>
-                        <h4 class="sub-heading">保有資格・免許</h4>
-                        <ul class="clean-bullet-list">
-                            <li>中学校・高等学校教諭一種免許状（理科）</li>
-                            <li>宗教文化士（日本宗教文化史学会）</li>
-                            <li>ディープラーニング G検定（JDLA）</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="sub-heading">理科教育指導</h4>
-                        <p class="narrative-small">
-                            中学生・高校生を対象とした個別・集団指導での理科指導に従事。
+                    <div class="video-info-body">
+                        <span class="video-tag">VIDEO WORK 01</span>
+                        <h3 class="video-title">『世界の知覚』 (Perception of the World)</h3>
+                        <p class="video-desc">
+                            環境の光、水、冷気、気配の移ろいと人間の知覚構造をテーマとした映像記録。知覚とメディア表現の交差を探求した作品。
                         </p>
-                        <ul class="timeline-inline">
-                            <li><strong>2024年:</strong> 理科指導（1年間）</li>
-                            <li><strong>2025.10 – 2026.03:</strong> 理科指導</li>
-                        </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="photo-inline-wrap">
-                    <img src="images/gallery/acad_07.jpg" alt="活動のひとこま" class="inline-photo" loading="lazy">
-                </div>
-            </div>
-
-            <!-- Awards -->
-            <div class="article-block">
-                <h3 class="block-heading">Honors &amp; Awards <span>受賞歴</span></h3>
-                <ul class="awards-minimal-list">
-                    <li>
-                        <span class="award-date">2023.02</span>
-                        <span class="award-name">九州大学チャレンジ&amp;クリエイション (C&amp;C) 総長賞 優秀賞</span>
-                    </li>
-                    <li>
-                        <span class="award-date">2022.02</span>
-                        <span class="award-name">九州大学チャレンジ&amp;クリエイション (C&amp;C) 総長賞 最優秀賞</span>
-                    </li>
-                    <li>
-                        <span class="award-date">2021</span>
-                        <span class="award-name">iGEM Competition 2021 Silver Medal（合成生物学世界大会 銀賞）</span>
-                    </li>
-                    <li>
-                        <span class="award-date">2019</span>
-                        <span class="award-name">日本生物学オリンピック 本選 銅賞</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Chronology -->
-            <div class="article-block">
-                <h3 class="block-heading">Chronology <span>略歴</span></h3>
-                <ol class="chronology-list">
-                    <li>
-                        <span class="chrono-year">2026.04 –</span>
-                        <div class="chrono-body">
-                            <strong>都内企業にて勤務開始（東京在住）</strong>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2026.03</span>
-                        <div class="chrono-body">
-                            <strong>九州大学大学院 芸術工学府 未来共生デザインコース 修了</strong>
-                            <span>修士（芸術工学）</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2024.04</span>
-                        <div class="chrono-body">
-                            <strong>九州大学大学院 芸術工学府 未来共生デザインコース 入学</strong>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2024.03</span>
-                        <div class="chrono-body">
-                            <strong>九州大学 理学部 生物学科 卒業</strong>
-                            <span>学士（理学）・副専攻（人文学）修得 / 数理生物学研究室</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2020.04</span>
-                        <div class="chrono-body">
-                            <strong>九州大学 理学部 生物学科 入学</strong>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2020.03</span>
-                        <div class="chrono-body">
-                            <strong>修道高等学校 卒業</strong>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="chrono-year">2001</span>
-                        <div class="chrono-body">
-                            <strong>広島県にて出生</strong>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-
-        <!-- ==================== RESEARCH SECTION ==================== -->
-        <section id="research" class="content-section">
-            <div class="section-title-wrap">
-                <h2 class="page-title">RESEARCH</h2>
-                <span class="page-title-sub">数理生物学・学術研究</span>
-            </div>
-
-            <div class="article-block">
-                <p class="section-lead-narrative">
-                    ヒトが集団内で維持してきた過度な不安や抑うつといった心理特性の適応的意義について、ゲーム理論や地域間環境格差、季節変動を取り入れた数理モデルを通じて理論的に解析しています。
-                </p>
-            </div>
-
-            <!-- Featured Preprint Paper -->
-            <div class="featured-paper-card">
-                <div class="paper-header-row">
-                    <span class="paper-kicker">PREPRINT</span>
-                    <span class="paper-venue">Jxiv (JST) 2024</span>
-                </div>
-                <h3 class="paper-title-link">
-                    <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/view/1267/" target="_blank" rel="noopener noreferrer">
-                        Anxiety-causing alleles may confer evolutionary advantages not in very dangerous but in moderately stressful environments
-                    </a>
-                </h3>
-                <p class="paper-author-names">
-                    <strong>Kenta Motoyashiki</strong>, Motohide Seki (本屋敷 健太, 関 元秀)
-                </p>
-
-                <div class="paper-abstract-box">
-                    <h4 class="abstract-title">概要 / Abstract</h4>
-                    <p>
-                        ヒトの情動的苦痛や不安感受性遺伝子がなぜ集団内で淘汰されずに維持されてきたのかを数理モデルによって検証。解析の結果、不安を引き起こすアレルは極めて危険な環境ではなく、中程度のストレス環境（適度なリスク環境）において選択有利になり得ることが示されました。
-                    </p>
-                </div>
-
-                <div class="paper-link-row">
-                    <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/view/1267/" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                        <span>Jxiv で論文全文を見る</span>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Scattered Photo 3 -->
-            <div class="editorial-photo-row">
-                <figure class="editorial-photo-box">
-                    <img src="images/gallery/acad_02.jpg" alt="研究書架・学術知の集積" class="editorial-img" loading="lazy">
-                </figure>
-            </div>
-
-            <!-- Academic Conference Presentations -->
-            <div class="article-block">
-                <h3 class="block-heading">Conference Presentations <span>学術学会発表</span></h3>
-
-                <div class="presentation-year-group">
-                    <h4 class="year-header">2025</h4>
-                    <ul class="presentation-listing">
-                        <li>
-                            <span class="pres-type">国際口頭</span>
-                            <div class="pres-detail">
-                                <strong>"Anxiety-causing alleles are favored in moderately stressful environments"</strong>
-                                <span>Annual Meeting of the Society for Mathematical Biology (国際数理生物学会)</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="pres-type">口頭発表</span>
-                            <div class="pres-detail">
-                                <strong>「季節性情動障害に関連するセロトニントランスポータ結合パタンの季節変動」</strong>
-                                <span>理論進化生態フォーラム</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="presentation-year-group">
-                    <h4 class="year-header">2024</h4>
-                    <ul class="presentation-listing">
-                        <li>
-                            <span class="pres-type">ポスター</span>
-                            <div class="pres-detail">
-                                <strong>「うつ関連遺伝子アレル頻度の地理的勾配を生み出した地域間環境格差に関する数理モデル：東アジアは過酷だったか？ユートピアだったか？」</strong>
-                                <span>第17回 日本人間行動進化学会年次大会</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="pres-type">口頭発表</span>
-                            <div class="pres-detail">
-                                <strong>「うつ関連遺伝子の進化モデル」</strong>
-                                <span>日本数理生物学会 年次大会</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="pres-type">口頭発表</span>
-                            <div class="pres-detail">
-                                <strong>「うつ病関連遺伝子の進化モデル：5-HTT遺伝子多型の維持メカニズムの解明」</strong>
-                                <span>理論生物学若手の会</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="pres-type">口頭発表</span>
-                            <div class="pres-detail">
-                                <strong>「うつ関連遺伝子の進化モデル」</strong>
-                                <span>ゲーム理論ワークショップ</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="presentation-year-group">
-                    <h4 class="year-header">2023</h4>
-                    <ul class="presentation-listing">
-                        <li>
-                            <span class="pres-type">口頭発表</span>
-                            <div class="pres-detail">
-                                <strong>「うつ病関連遺伝子の進化モデル」</strong>
-                                <span>日本数理生物学会 年次大会</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="pres-type">ポスター</span>
-                            <div class="pres-detail">
-                                <strong>"Model for the evolution of depression-related genes"</strong>
-                                <span>理論生物学若手の会</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Affiliations -->
-            <div class="article-block">
-                <h3 class="block-heading">Affiliations <span>所属学会</span></h3>
-                <ul class="clean-bullet-list">
-                    <li>日本数理生物学会（JSMB）</li>
-                    <li>日本人間行動進化学会（HBES-J）</li>
-                </ul>
-            </div>
-        </section>
-
-
-        <!-- ==================== TALKS & LECTURES SECTION ==================== -->
-        <section id="talks" class="content-section">
-            <div class="section-title-wrap">
-                <h2 class="page-title">TALKS &amp; LECTURES</h2>
-                <span class="page-title-sub">講演・一般発表・講義登壇</span>
-            </div>
-
-            <div class="article-block">
-                <p class="section-lead-narrative">
-                    学会等の学術発表とは別に、科学コミュニケーション、サイエンスカフェ、大学講義でのゲスト登壇、高校企画、市民向けワークショップなどで行ってきた講演・発表の記録です。
-                </p>
-            </div>
-
-            <!-- Talks Chronology List -->
-            <div class="article-block">
-                <div class="talks-container">
-
-                    <!-- 2026 -->
-                    <div class="talk-year-section">
-                        <h3 class="talk-year-badge">2026</h3>
-                        <div class="talk-cards-grid">
-                            <article class="talk-item-card">
-                                <span class="talk-category">高校企画 / 招待講演</span>
-                                <h4 class="talk-title">「メディアでできること 〜進化と人の関係〜」</h4>
-                                <p class="talk-host">修道高等学校 修学旅行企画</p>
-                                <p class="talk-desc">母校の後輩たちに向け、進化生物学の視座とメディア・表現の可能性について講演。</p>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">市民講座 / ワークショップ</span>
-                                <h4 class="talk-title">「神仏習合 〜あの神社も元々お寺だった〜」</h4>
-                                <p class="talk-host">ウェルビーイングラボ</p>
-                                <p class="talk-desc">神仏習合の歴史や、寺院と神社の混淆の痕跡について解説。</p>
-                            </article>
-                        </div>
+                <!-- Video 2: 宮崎 -->
+                <article class="video-card">
+                    <div class="video-player-wrap">
+                        <video controls preload="metadata" poster="videos/poster-miyazaki.jpg" playsinline>
+                            <source src="videos/miyazaki.mp4" type="video/mp4">
+                            お使いのブラウザは動画再生に対応していません。
+                        </video>
                     </div>
-
-                    <!-- 2025 -->
-                    <div class="talk-year-section">
-                        <h3 class="talk-year-badge">2025</h3>
-                        <div class="talk-cards-grid">
-                            <article class="talk-item-card talk-highlight">
-                                <span class="talk-category">大学講義 / ゲスト登壇</span>
-                                <h4 class="talk-title">「日本民俗学と知覚が メディアに与える影響」</h4>
-                                <p class="talk-host">九州大学大学院 芸術工学府 メディアサイエンス講義</p>
-                                <p class="talk-desc">日本民俗学の知見と人間の知覚構造が、情報やメディア表現に与える影響について講義。</p>
-                                <div class="talk-media-thumb">
-                                    <img src="images/media-lecture-title.png" alt="日本民俗学と知覚が メディアに与える影響 スライド" class="talk-thumb-img">
-                                </div>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">サイエンスカフェ</span>
-                                <h4 class="talk-title">「進化から見た病気の話」</h4>
-                                <p class="talk-host">九州大学 芸術工学府「ゲイコウアート＆サイエンスカフェ」</p>
-                                <p class="talk-desc">進化医学の視点から、病気や身体の防御反応が持つ生物学的意義を一般向けに対話形式で解説。</p>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">科学教育キャンプ</span>
-                                <h4 class="talk-title">「進化？病気？ってなんだ？」</h4>
-                                <p class="talk-host">エデュパーク サイエンスキャンプ</p>
-                                <p class="talk-desc">小中学生向けに、生命の進化の仕組みと病気の関わりについてわかりやすく解説。</p>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">市民講座 / ワークショップ</span>
-                                <h4 class="talk-title">「神社がもっと身近になる！？」</h4>
-                                <p class="talk-host">ウェルビーイングラボ</p>
-                                <p class="talk-desc">宗教文化士の視点から、身近な神社の成り立ちや歴史的背景を紐解く市民向けトーク。</p>
-                            </article>
-                        </div>
+                    <div class="video-info-body">
+                        <span class="video-tag">VIDEO WORK 02</span>
+                        <h3 class="video-title">『宮崎』 (Miyazaki)</h3>
+                        <p class="video-desc">
+                            神話と信仰が息づく宮崎の聖地、石段、神域の静謐と光影を切り取ったドキュメンタリー映像。
+                        </p>
                     </div>
+                </article>
 
-                    <!-- 2024 -->
-                    <div class="talk-year-section">
-                        <h3 class="talk-year-badge">2024</h3>
-                        <div class="talk-cards-grid">
-                            <article class="talk-item-card">
-                                <span class="talk-category">サイエンスカフェ</span>
-                                <h4 class="talk-title">「進化から見た病気の話」</h4>
-                                <p class="talk-host">九州大学 芸術工学府「ゲイコウアート＆サイエンスカフェ」</p>
-                                <p class="talk-desc">進化医学・数理生物学の視点から、ヒトの病気や心身の仕組みについて対話形式で紹介。</p>
-                            </article>
-                        </div>
+                <!-- Video 3: 金毘羅船々 -->
+                <article class="video-card">
+                    <div class="video-player-wrap">
+                        <video controls preload="metadata" poster="videos/poster-konpira.jpg" playsinline>
+                            <source src="videos/konpira.mp4" type="video/mp4">
+                            お使いのブラウザは動画再生に対応していません。
+                        </video>
                     </div>
-
-                    <!-- 2023 -->
-                    <div class="talk-year-section">
-                        <h3 class="talk-year-badge">2023</h3>
-                        <div class="talk-cards-grid">
-                            <article class="talk-item-card">
-                                <span class="talk-category">サイエンスカフェ</span>
-                                <h4 class="talk-title">「BioGasの話」</h4>
-                                <p class="talk-host">九州大学 芸術工学府「ゲイコウアート＆サイエンスカフェ」</p>
-                                <p class="talk-desc">バイオガス技術の仕組みと、生物資源を活用したエネルギー循環について発表。</p>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">企業講演</span>
-                                <h4 class="talk-title">「Alternative to Canary」</h4>
-                                <p class="talk-host">株式会社ファーマフーズ (Pharma Foods)</p>
-                                <p class="talk-desc">バイオテクノロジーと代替モデルに関するプレゼンテーションを実施。</p>
-                            </article>
-                            <article class="talk-item-card">
-                                <span class="talk-category">科学教育キャンプ</span>
-                                <h4 class="talk-title">「進化？病気？ってなんだ？」</h4>
-                                <p class="talk-host">エデュパーク サイエンスキャンプ</p>
-                                <p class="talk-desc">小中学生を対象に、生命の歴史と病気の捉え方についてのサイエンスプログラムを実施。</p>
-                            </article>
-                        </div>
+                    <div class="video-info-body">
+                        <span class="video-tag">VIDEO WORK 03</span>
+                        <h3 class="video-title">『金毘羅船々』 (Konpira Fune-fune)</h3>
+                        <p class="video-desc">
+                            伝統的な民謡の旋律と、建造物・空・トンネル・光の変遷を重ね合わせたシネマティック作品。
+                        </p>
                     </div>
-
-                    <!-- 2022 -->
-                    <div class="talk-year-section">
-                        <h3 class="talk-year-badge">2022</h3>
-                        <div class="talk-cards-grid">
-                            <article class="talk-item-card">
-                                <span class="talk-category">科学教育キャンプ</span>
-                                <h4 class="talk-title">「生物ってなんだ、よくわかると面白い菌の話」</h4>
-                                <p class="talk-host">エデュパーク サイエンスキャンプ</p>
-                                <p class="talk-desc">身の回りの微生物や菌類（キノコ・カビ）の世界について、子どもたち向けに講義・解説。</p>
-                            </article>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== WORKS & ACTIVITIES SECTION ==================== -->
-        <section id="works" class="content-section">
-            <div class="section-title-wrap">
-                <h2 class="page-title">WORKS &amp; ACTIVITIES</h2>
-                <span class="page-title-sub">音楽・日本文化・メディア出演</span>
-            </div>
-
-            <!-- Music & Drums -->
-            <div class="article-block">
-                <h3 class="block-heading">Music &amp; Drums <span>音楽・ドラム演奏</span></h3>
-                <div class="profile-narrative">
-                    <p>
-                        13歳よりドラムを開始。ロックを基盤としつつ、ブルース、ボサノバ、ジャズフュージョン、ラップメタルなど幅広いジャンルの演奏に取り組み、九大フォークソング部では部長を務めました。<br>
-                        現在はバンド（@j1_nox）等でのドラムを担当。過去には東方instオリジナルバンド「Theoretical East」、ラップメタルバンド「Age Against the Democracy」等でもドラムを担当しました。
-                    </p>
-                </div>
-
-                <div class="band-links-row">
-                    <a href="https://x.com/j1_nox" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                        <span>Band: @j1_nox</span>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="https://twitter.com/theoreticaleast" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                        <span>Theoretical East</span>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="https://twitter.com/age_against_dem" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                        <span>Age Against the Democracy</span>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-
-                <div class="editorial-photo-row" style="margin-top: 2rem;">
-                    <figure class="editorial-photo-box">
-                        <img src="images/gallery/mus_01.jpg" alt="ライブステージ・演奏空間" class="editorial-img" loading="lazy">
-                    </figure>
-                </div>
-            </div>
-
-            <!-- Japanese Culture & Thought -->
-            <div class="article-block">
-                <h3 class="block-heading">Japanese Culture &amp; Thought <span>日本文化・宗教文化</span></h3>
-                <div class="profile-narrative">
-                    <p>
-                        宗教文化士として神仏習合や本地垂迹説、日本人の信仰観・死生観の変遷をリサーチしています。市民向け勉強会やワークショップにて、神社仏閣の歴史や身近な信仰文化を解説する活動も行っています。
-                    </p>
-                </div>
-
-                <div class="editorial-photo-row" style="margin-top: 1.5rem;">
-                    <figure class="editorial-photo-box">
-                        <img src="images/gallery/cult_05.jpg" alt="雷山千如寺大悲王院 苔庭と巨樹" class="editorial-img" loading="lazy">
-                    </figure>
-                </div>
-            </div>
-
-            <!-- Acting & Media Works -->
-            <div class="article-block">
-                <h3 class="block-heading">Acting &amp; Media Works <span>幼少期の出演歴</span></h3>
-                <p class="narrative-small">子役時代に出演した映画作品およびラジオドラマの記録です。</p>
-
-                <div class="media-record-table">
-                    <div class="media-record-item">
-                        <span class="media-record-category">映画（主演）</span>
-                        <div class="media-record-content">
-                            <strong class="media-work-title">夏休みの地図</strong>
-                            <p class="media-work-credits">主演 / 監督: 深作健太 / 脚本: 鴨義信（全国劇場公開作品）</p>
-                        </div>
-                    </div>
-                    <div class="media-record-item">
-                        <span class="media-record-category">映画</span>
-                        <div class="media-record-content">
-                            <strong class="media-work-title">ハッピーランディング</strong>
-                            <p class="media-work-credits">為永尊 役 / 監督: 天野千尋 / 脚本: 鴨義信 / 主演: 中村ゆり</p>
-                        </div>
-                    </div>
-                    <div class="media-record-item">
-                        <span class="media-record-category">ラジオドラマ</span>
-                        <div class="media-record-content">
-                            <strong class="media-work-title">赤ヘル1975</strong>
-                            <p class="media-work-credits">マナブ 役 / 原作: 重松清（NHK ラジオドラマ）</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ==================== GALLERY / ARCHIVE SECTION ==================== -->
-        <section id="gallery" class="content-section">
-            <div class="section-title-wrap">
-                <h2 class="page-title">GALLERY</h2>
-                <span class="page-title-sub">写真記録・テーマ別アーカイブ</span>
-            </div>
-
-            <div class="article-block">
-                <p class="section-lead-narrative">
-                    神社仏閣の探訪、野外フィールドワーク、数理・学術研究の現場、音楽活動などの写真記録です。テーマ別に分類した全36枚のアーカイブを公開しています。
-                </p>
-            </div>
-
-            <!-- Thematic 4-Cards Preview Grid -->
-            <div class="gallery-preview-grid">
-                <a href="gallery.html#culture" class="theme-card">
-                    <div class="theme-card-img-wrap">
-                        <img src="images/gallery/thumbs/cult_01.jpg" alt="神社仏閣・探訪" class="theme-card-img" loading="lazy">
-                        <span class="theme-card-count">10 PHOTOS</span>
-                    </div>
-                    <div class="theme-card-body">
-                        <span class="theme-kicker">CULTURE &amp; SACRED PLACES</span>
-                        <h3 class="theme-title">神社仏閣・探訪</h3>
-                        <p class="theme-desc">出雲大社、京都東寺、糸島・雷山千如寺、二見ヶ浦鳥居、安芸竹原など</p>
-                        <span class="theme-link-arrow">アーカイブを見る →</span>
-                    </div>
-                </a>
-
-                <a href="gallery.html#nature" class="theme-card">
-                    <div class="theme-card-img-wrap">
-                        <img src="images/gallery/thumbs/nat_01.jpg" alt="フィールド・自然・生物" class="theme-card-img" loading="lazy">
-                        <span class="theme-card-count">10 PHOTOS</span>
-                    </div>
-                    <div class="theme-card-body">
-                        <span class="theme-kicker">FIELDWORK &amp; NATURE</span>
-                        <h3 class="theme-title">自然・生物・フィールド</h3>
-                        <p class="theme-desc">天草の野生イルカ、玄界灘・糸島の海景、北海道の原野、動植物など</p>
-                        <span class="theme-link-arrow">アーカイブを見る →</span>
-                    </div>
-                </a>
-
-                <a href="gallery.html#academic" class="theme-card">
-                    <div class="theme-card-img-wrap">
-                        <img src="images/gallery/thumbs/acad_01.jpg" alt="学術・研究・書架" class="theme-card-img" loading="lazy">
-                        <span class="theme-card-count">9 PHOTOS</span>
-                    </div>
-                    <div class="theme-card-body">
-                        <span class="theme-kicker">ACADEMIC &amp; RESEARCH</span>
-                        <h3 class="theme-title">学術・研究・書架</h3>
-                        <p class="theme-desc">九州大学図書館書架、研究室でのゼミ・対話、ポートレートなど</p>
-                        <span class="theme-link-arrow">アーカイブを見る →</span>
-                    </div>
-                </a>
-
-                <a href="gallery.html#music" class="theme-card">
-                    <div class="theme-card-img-wrap">
-                        <img src="images/gallery/thumbs/mus_01.jpg" alt="音楽・ステージ・日常" class="theme-card-img" loading="lazy">
-                        <span class="theme-card-count">7 PHOTOS</span>
-                    </div>
-                    <div class="theme-card-body">
-                        <span class="theme-kicker">MUSIC &amp; LIFE</span>
-                        <h3 class="theme-title">音楽・日常の記録</h3>
-                        <p class="theme-desc">ライブハウスでの演奏空間、ステージ機材、イベントのひとこまなど</p>
-                        <span class="theme-link-arrow">アーカイブを見る →</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="gallery-cta-block">
-                <a href="gallery.html" class="btn-gallery-all">
-                    <span>全ての写真を見る（36枚のアーカイブ・高解像度ビューアー）</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </section>
-
-
-        <!-- ==================== CONTACT SECTION ==================== -->
-        <section id="contact" class="content-section">
-            <div class="section-title-wrap">
-                <h2 class="page-title">CONTACT</h2>
-                <span class="page-title-sub">お問い合わせ・リンク</span>
-            </div>
-
-            <div class="article-block text-center-block">
-                <p class="contact-lead">
-                    研究や講演、お仕事、その他各種ご連絡・メッセージは X または Note よりお気軽にお送りください。
-                </p>
-
-                <div class="contact-links-list">
-                    <a href="https://x.com/motoyankk" target="_blank" rel="noopener noreferrer" class="contact-link-card">
-                        <span class="contact-channel">X (Twitter)</span>
-                        <span class="contact-handle">@motoyankk</span>
-                    </a>
-                    <a href="https://note.com/shiganaibio" target="_blank" rel="noopener noreferrer" class="contact-link-card">
-                        <span class="contact-channel">Note</span>
-                        <span class="contact-handle">とある社会人(どわー)</span>
-                    </a>
-                    <a href="https://jxiv.jst.go.jp/index.php/jxiv/preprint/view/1267/" target="_blank" rel="noopener noreferrer" class="contact-link-card">
-                        <span class="contact-channel">Jxiv (Preprint)</span>
-                        <span class="contact-handle">10.1098/rspb.2022.2584 (view/1267)</span>
-                    </a>
-                </div>
+                </article>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-left">
@@ -676,12 +183,11 @@
             </div>
             <div class="footer-right">
                 <nav class="footer-nav">
-                    <a href="#about">ABOUT</a>
-                    <a href="#research">RESEARCH</a>
-                    <a href="#talks">TALKS</a>
-                    <a href="#works">WORKS</a>
-                    <a href="#gallery">GALLERY</a>
-                    <a href="#contact">CONTACT</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="research.html">RESEARCH</a>
+                    <a href="talks.html">TALKS</a>
+                    <a href="works.html">WORKS</a>
+                    <a href="contact.html">CONTACT</a>
                 </nav>
                 <p class="copyright">&copy; 2026 Kenta Motoyashiki. All Rights Reserved.</p>
             </div>
